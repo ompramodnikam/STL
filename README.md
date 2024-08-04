@@ -87,3 +87,30 @@ A queue is a First In First Out (FIFO) data structure where elements are added a
 - **IsEmpty**: Check if the queue is empty.
 - **Display**: Display the contents of the queue.
 - **Count**: Count the number of elements in the queue.
+
+- ### Sorting Algorithms
+
+#### Bubble Sort
+
+Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.
+
+##### Functions
+
+- **BubbleSort**: Sort the elements in ascending order using Bubble Sort.
+
+#### Selection Sort
+
+Selection Sort is a simple sorting algorithm that divides the input list into two parts: the sublist of items already sorted and the sublist of items remaining to be sorted.
+
+##### Functions
+
+- **SelectionSort**: Sort the elements in ascending order using Selection Sort.
+
+#### Insertion Sort
+
+Insertion Sort is a simple sorting algorithm that builds the final sorted array one item at a time.
+
+##### Functions
+
+- **InsertionSort**: Sort the elements in ascending order using Insertion Sort.
+
