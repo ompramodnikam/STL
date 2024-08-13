@@ -1422,6 +1422,218 @@ void InsertionSorting <T> :: InsertionSort()
     }
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  DS Name      :      Linear Search
+//  Description  :      Implimentation of Linker Search Algorithm
+//  Author       :      Om Pramod Nikam
+//  Date         :      13/08/2024
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+template <class T>
+class LinearSearching
+{
+    private :   
+        int iSize;
+        T *Arr;
+    
+    public : 
+        LinearSearching(int A);
+        ~LinearSearching();
+        void Accept();
+        bool LinearSearch(T iNo);
+};
+
+template <class T>
+LinearSearching <T> :: LinearSearching(int A)
+{
+    this->iSize = A;
+    this->Arr = new int[iSize];
+}
+
+template <class T>
+LinearSearching <T> :: ~LinearSearching()
+{
+    delete []Arr;
+}
+
+template <class T>
+void LinearSearching <T> :: Accept()
+{
+    int i = 0;
+
+    cout<<"Enter the elements : "<<endl;
+    for(i = 0 ; i < iSize ; i++)
+    {
+        cin>>Arr[i];
+    }
+}
+
+template <class T>
+bool LinearSearching <T> :: LinearSearch(T iNo)
+{
+    bool bFlag = false;
+    int i = 0;
+
+    for(i = 0 ; i < iSize ; i++)
+    {
+        if(Arr[i] == iNo)
+        {
+            bFlag = true;
+            break;
+        }
+    }
+    return bFlag;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  DS Name      :      Birectional Search
+//  Description  :      Implimentation of Birectional Search Algorithm
+//  Author       :      Om Pramod Nikam
+//  Date         :      13/08/2024
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+template <class T>
+class Bidirectional
+{
+    private :   
+        int iSize;
+        T *Arr;
+    
+    public : 
+        Bidirectional(int A);
+        ~Bidirectional();
+        void Accept();
+        bool Bidirsearch(T iNo);
+};
+
+template <class T>
+Bidirectional <T> :: Bidirectional(int A)
+{
+    this->iSize = A;
+    this->Arr = new int[iSize];
+}
+
+template <class T>
+Bidirectional <T> :: ~Bidirectional()
+{
+    delete []Arr;
+}
+
+template <class T>
+void Bidirectional <T> :: Accept()
+{
+    int i = 0;
+
+    cout<<"Enter the elements : "<<endl;
+    for(i = 0 ; i < iSize ; i++)
+    {
+        cin>>Arr[i];
+    }
+}
+
+template <class T>
+bool Bidirectional <T> :: Bidirsearch(T iNo)
+{
+    int iStart = 0;
+    int iEnd = 0;
+    bool bFlag = false;
+    int i = 0;
+
+    for(iStart = 0,iEnd = iSize-1 ; iStart <= iEnd ; iStart++,iEnd--)
+    {
+        if((Arr[iStart] == iNo ) || (Arr[iEnd] == iNo))
+        {
+            bFlag = true;
+            break;
+        }
+    }
+    return bFlag;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  DS Name      :      Binary Search
+//  Description  :      Implimentation of Binary Search Algorithm
+//  Author       :      Om Pramod Nikam
+//  Date         :      13/08/2024
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+template <class T>
+class BinarySearch
+{
+    private :   
+        int iSize;
+        T *Arr;
+    
+    public : 
+        BinarySearch(int A);
+        ~BinarySearch();
+        void Accept();
+        bool Binarysearch(T iNo);
+};
+
+template <class T>
+BinarySearch <T> :: BinarySearch(int A)
+{
+    this->iSize = A;
+    this->Arr = new int[iSize];
+}
+
+template <class T>
+BinarySearch <T> :: ~BinarySearch()
+{
+    delete []Arr;
+}
+
+template <class T>
+void BinarySearch <T> :: Accept()
+{
+    int i = 0;
+
+    cout<<"Enter the elements : "<<endl;
+    for(i = 0 ; i < iSize ; i++)
+    {
+        cin>>Arr[i];
+    }
+}
+
+template <class T>
+bool BinarySearch <T> :: Binarysearch(T iNo)
+{
+    int iStart = 0;
+    int iMid = 0;
+    int iEnd = 0;
+    bool bFlag = false;
+
+    iEnd = iSize-1;
+
+    while(iStart <= iEnd)
+    {
+        iMid = iStart + ((iEnd - iStart)/2);
+
+        if(Arr[iStart] == iNo || Arr[iMid] == iNo || Arr[iEnd] == iNo)
+        {
+            bFlag = true;
+            break;
+        }
+        else if(Arr[iMid] < iNo)
+        {
+            iStart = iMid + 1;
+        }
+        else if(Arr[iMid] > iNo)
+        {
+            iEnd = iMid + 1;
+        }
+    }
+    return bFlag;
+}
+
+
 int main()
 {
     //It is a library which don't have Main Function 
