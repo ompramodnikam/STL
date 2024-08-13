@@ -113,4 +113,27 @@ Insertion Sort is a simple sorting algorithm that builds the final sorted array 
 ##### Functions
 
 - **InsertionSort**: Sort the elements in ascending order using Insertion Sort.
+- 
+## Algorithms Implemented
+
+### Linear Search
+
+Linear Search is the simplest search algorithm. It checks each element in the list sequentially until the desired element is found or the list ends.
+
+- **Time Complexity**: O(n)
+- **STL Function Used**: `std::find`
+
+### Bidirectional Search
+
+Bidirectional Search operates by simultaneously searching forward from the start of the list and backward from the end. This technique can be more efficient for large datasets compared to linear search but is less commonly used due to its complexity.
+
+- **Time Complexity**: O(n) (best case can be faster if the target is near the ends)
+- **Custom Implementation**: A custom function that combines forward and backward searches.
+
+### Binary Search
+
+Binary Search is a highly efficient algorithm for finding an element in a sorted list. It repeatedly divides the search interval in half, eliminating half of the remaining elements with each step.
+
+- **Time Complexity**: O(log n)
+- **STL Function Used**: `std::binary_search`, `std::lower_bound`, `std::upper_bound`
 
